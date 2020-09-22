@@ -1,0 +1,30 @@
+.copyright__list {
+    .list-reset();
+
+    @media (min-width: @tablet-width) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.copyright__item {
+    &:first-child {
+        margin-bottom: 12px;
+
+        @media (min-width: @tablet-width) {
+            margin-bottom: 0;
+            margin-right: 32px;
+        }
+    }
+}
+
+.copyright__text,
+.copyright__link {
+    .font(12px, 20px);
+    color: @basic-whiteopacity;
+    margin: 0;
+}
+
+.copyright__text {
+    letter-spacing: 0.3px;
+}

@@ -1,0 +1,33 @@
+.season-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+
+    @media (min-width: @tablet-width) {
+        margin-bottom: 40px;
+    }
+}
+
+.season-control__link {
+    .font(12px, 20px);
+    color: @basic-darkpink;
+    margin-right: 25px;
+    cursor: pointer;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--active {
+        border-bottom: 1px solid @basic-darkpink;
+    }
+
+    @media (min-width: @tablet-width) {
+        margin-right: 34px;
+    }
+
+    @media (min-width: @desktop-width) {
+        margin-right: 58px;
+    }
+}

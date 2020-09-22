@@ -1,0 +1,89 @@
+.main-nav__button-wrapper {
+    @media (min-width: @tablet-width) {
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.main-nav__link { 
+    display: none;
+    
+    @media (min-width: @tablet-width) {
+        display: inline-block;
+        .font(12px, 10px);
+        color: @special-purple;
+    }
+
+    @media (min-width: @desktop-width) {
+        .font(16px, 10px);
+    }
+}
+
+.main-nav__button {
+    position: relative;
+    border: none;
+    width: 30px;
+    height: 2px;
+    background-color: @basic-purple;
+    cursor: pointer;
+    padding: 0;
+
+    @media (min-width: @tablet-width) {
+        width: 13px;
+        height: 1px;
+        margin-right: 6px;
+        margin-top: 2px;
+    }
+
+    @media (min-width: @desktop-width) {
+        width: 24px;
+        margin-top: 3px;
+        margin-right: 12px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background-color: @basic-purple;
+        top: -5px;
+        left: 0;
+
+        @media (min-width: @tablet-width) {
+            width: 13px;
+            height: 1px;
+            top: -3px;
+        }
+
+        @media (min-width: @desktop-width) {
+            width: 24px;
+            top: -5px;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: @basic-purple;
+        top: 6px;
+        left: 0;
+
+        @media (min-width: @tablet-width) {
+            width: 8px;
+            height: 1px;
+            top: 4px;
+        }
+
+        @media (min-width: @desktop-width) {
+            width: 14px;
+            top: 7px;
+        }
+    }
+}
+
+.main-nav__list {
+    display: none;
+}

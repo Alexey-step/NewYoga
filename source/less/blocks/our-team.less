@@ -1,0 +1,44 @@
+.our-team {
+    position: relative;
+    padding-top: 0;
+    background-image: url("../img/our-team-background-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding-bottom: 64px;
+
+    @media (min-resolution: 2dppx) {
+        background-image: url("../img/our-team-background-mobile@2x.png");
+        background-size: 85%;
+    }
+
+    @media (min-width: @tablet-width) {
+        background-image: url("../img/our-team-background-tablet@1x.png");
+        padding-bottom: 123px;
+        padding-top: 30px;
+        background-size: 65%;
+        background-position: 3px 19px;
+
+        @media (min-resolution: 2dppx) {
+            background-image: url("../img/our-team-background-tablet@2x.png");
+        }
+    }
+}
+
+.our-team__title {
+    .font(18px, 0px);
+    color: @basic-purple;
+    margin: 0;
+    margin-bottom: 46px;
+    text-align: center;
+
+    @media (min-width: @tablet-width) {
+        .font(21px, 15px);
+        margin-bottom: 70px;
+        margin-left: 7px;
+    }
+}
+
+.our-team__slider {
+    .container();
+    padding: 0 46px;
+}

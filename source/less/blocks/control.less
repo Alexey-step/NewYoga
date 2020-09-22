@@ -1,0 +1,93 @@
+.control {
+    &--slider {
+        @media (min-width: @tablet-width) {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.control__toggle {
+    background-color: transparent;
+    border: 1px solid @basic-purple;
+    cursor: pointer;
+
+    &--active {
+        background-color: @basic-purple;
+        border: none;
+    }
+}
+
+.control__toggle-slider {
+    position: relative;
+    width: 16px;
+    height: 31px;
+
+    @media (min-width: @tablet-width) {
+        width: 29px;
+        height: 19px;
+    }
+
+    &--left {
+        position: absolute;
+        top: 70px;
+        right: calc(50% + 129px);
+
+        @media (min-width: @tablet-width) {
+            position: relative;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            top: 0;
+            margin-right: 10px;
+        }
+    }
+
+    &--right {
+        position: absolute;
+        top: 70px;
+        left: calc(50% + 129px);
+
+        @media (min-width: @tablet-width) {
+            position: relative;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            top: 0;
+            margin-left: 10px;
+        }
+    }
+}
+
+.control__toggle-review {
+    position: relative;
+    width: 31px;
+    height: 18px;
+}
+
+.control__svg {
+    & path {
+        stroke: @basic-purple;
+    }
+
+    &--active path {
+        stroke: @basic-white;
+    }
+}
+
+.control__page-number {
+    &--slider {
+        display: none;
+
+        @media (min-width: @tablet-width) {
+            display: block;
+        }
+    }
+
+    &--reviews {
+        .font(12px, 20px);
+        color: @basic-purple;
+        margin: 0;
+    }
+}

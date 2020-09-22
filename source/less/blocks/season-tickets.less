@@ -1,0 +1,45 @@
+.season-tickets {
+    padding-bottom: 44px;
+    background-image: url("../img/season-control-background-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+        background-image: url("../img/season-control-background-mobile@2x.png");
+    }
+
+    @media (min-width: @tablet-width) {
+        background-image: url("../img/season-control-tablet@1x.png");
+        background-repeat: no-repeat;
+        background-position: 0 -18px;
+        padding-bottom: 99px;
+
+        @media (min-resolution: 2dppx) {
+            background-image: url("../img/season-control-tablet@2x.png");
+        }
+    }
+}
+
+.season-tickets__wrapper {
+    .container();
+    padding: 0 35px;
+}
+
+.season-tickets__title {
+    .font(18px, 0px);
+    color: @basic-purple;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 40px;
+
+    @media (min-width: @tablet-width) {
+        .font(21px, 15px);
+        margin-bottom: 19px;
+    }
+
+    @media (min-width: @desktop-width) {
+        .font(30px, 15px);
+        margin-bottom: 54px;
+    }
+}

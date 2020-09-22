@@ -1,0 +1,42 @@
+.feedback {
+    padding-bottom: 70px;
+    padding-top: 62px;
+    background-image: url("../img/yoga-footer-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+        background-image: url("../img/yoga-footer-mobile@2x.png");
+        background-size: cover;
+    }
+
+    @media (min-width: @tablet-width) {
+        background-image: url("../img/yoga-footer-tablet@1x.png");
+        padding-top: 69px;
+        padding-bottom: 69px;
+
+        @media (min-resolution: 2dppx) {
+            background-image: url("../img/yoga-footer-tablet@2x.png");
+        }
+    }
+}
+
+.feedback__title {
+    .font(20px, 27px);
+    color: @basic-purple;
+    margin: 0 auto;
+    margin-bottom: 26px;
+    text-align: left;
+    width: 320px;
+    padding-left: 35px;
+    padding-right: 11px;
+
+    @media (min-width: @tablet-width) {
+        .font(30px, 40px);
+        width: 768px;
+        padding-left: 183px;
+        padding-right: 173px;
+        margin-bottom: 39px;
+    }
+}

@@ -1,0 +1,116 @@
+.card-list__item {
+    display: none;
+
+    &--active {
+        display: block;
+
+        @media (min-width: @tablet-width) {
+            margin-bottom: 38px;
+            min-height: 648px;
+        }
+    }
+}
+
+.card-list__wrapper {
+    display: none;
+    position: relative;
+    background-color: @basic-white;
+    padding: 60px 16px 27px 15px;
+    margin-bottom: 28px;
+    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+
+    @media (min-width: @tablet-width) {
+        display: block;
+        padding: 72px 57px 25px 87px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 18px;
+        left: 16px;
+        width: 43px;
+        height: 23px;
+        background-image: url("../img/icon-quotes.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+
+        @media (min-width: @tablet-width) {
+            top: 33px;
+            left: 90px;
+        }
+    }
+
+    &:first-child {
+        display: block; 
+
+        @media (min-width: @tablet-width) {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+.card-list__text {
+    .font(10px, 15px);
+    color: @basic-purple;
+    margin: 0;
+    margin-bottom: 15px;
+
+    @media (min-width: @tablet-width) {
+        .font(12px, 20px);
+        margin-bottom: 20px;
+    }
+
+    &:nth-child(2n) {
+        @media (min-width: @tablet-width) {
+            width: 207px;
+        }
+    }
+}
+
+.card-list__user-wrapper {
+    display: flex;
+    margin-top: 24px;
+}
+
+.card-list__user-img {
+    width: 52px;
+    height: 51px;
+    margin-right: 13px;
+}
+
+.card-list__user-name {
+    .font(12px, 12px);
+    color: @pink-opacity;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.card-list__user-date {
+    .font(10px, 13px);
+    color: @purple-opacity;
+    margin: 0;
+    margin-bottom: 7px
+}
+
+.card-list__user-social {
+    &:first-child {
+        margin-right: 7px;
+    }
+}
+
+.card-list__user-svg {
+    & path {
+        fill: rgba(139, 126, 172, 0.65);
+    }
+
+    &--vk {
+        width: 13px;
+        height: 8px;
+    }
+
+    &--tw {
+        width: 15px;
+        height: 10px;
+    }
+}

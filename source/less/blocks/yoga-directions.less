@@ -1,0 +1,227 @@
+.yoga-directions {
+    @media (min-width: @tablet-width) {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: min-content min-content min-content;
+        column-gap: 22px;
+        row-gap: 19px;
+    }
+
+    @media (min-width: @desktop-width) {
+        column-gap: 34px;
+        row-gap: 28px;
+    }
+}
+
+.yoga-directions__item {
+    margin-bottom: 28px;
+
+    @media (min-width: @tablet-width) {
+        display: flex;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin-bottom: 0;
+    }
+
+    &:first-child {
+        @media (min-width: @tablet-width) {
+            display: flex;
+            flex-direction: column;
+            width: 247px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            margin-bottom: 0;
+
+            @media (min-width: @desktop-width) {
+                width: 366px;
+            }
+        }
+
+        .yoga-directions__wrapper {
+            @media (min-width: @tablet-width) {
+                padding-top: 19px;
+                padding-left: 21px;
+                padding-bottom: 19px;
+            }
+
+            @media (min-width: @desktop-width) {
+                padding-top: 42px;
+                padding-left: 46px;
+                padding-bottom: 26px;
+            }
+        }
+    }
+
+
+    &:last-child {
+        display: none;
+
+        @media (min-width: @tablet-width) {
+            display: inline-block;
+            background-color: @basic-white;
+            margin-top: 20px;
+
+            & .yoga-directions__link-more {
+                .font(10px, 20px);
+                color: @basic-purple;
+                display: flex;
+                justify-content: center;
+                padding-top: 7px;
+                padding-bottom: 6px;
+
+                @media (min-width: @desktop-width) {
+                    .font(12px, 20px);
+                    padding-top: 14px;
+                    padding-bottom: 14px;
+                }
+            }
+        }
+
+        @media (min-width: @desktop-width) {
+            margin-top: 28px;
+        }
+        
+    }
+}
+
+.yoga-directions__wrapper {
+    position: relative;
+    background-color: @basic-white;
+    padding-top: 16px;
+    padding-left: 20px;
+    padding-bottom: 16px;
+
+    @media (min-width: @tablet-width) {
+        padding-top: 19px;
+        padding-left: 21px;
+        flex-grow: 2;
+    }
+
+    @media (min-width: @desktop-width) {
+        padding-top: 33px;
+        padding-left: 34px;
+        padding-bottom: 33px;
+    }
+}
+
+.yoga-directions__title {
+    .font(12px, 15px);
+    color: @basic-purple;
+    margin: 0;
+    margin-bottom: 5px;
+
+    @media (min-width: @desktop-width) {
+        .font(16px, 15px);
+        margin-bottom: 13px;
+    }
+}
+
+.yoga-directions__text {
+    .font(10px, 15px);
+    color: @basic-purple;
+    margin: 0;
+    margin-bottom: 5px;
+    width: 140px;
+
+    @media (min-width: @desktop-width) {
+        .font(12px, 20px);
+        width: 171px;
+        margin-bottom: 16px;
+    }
+}
+
+.yoga-directions__link-instructor {
+    .font(10px, 15px);
+    color: @basic-darkpink;
+    margin: 0;
+
+    @media (min-width: @desktop-width) {
+        .font(12px, 15px);
+    }
+}
+
+.yoga-directions__description {
+    margin: 0;
+    width: 102px;
+
+    @media (min-width: @desktop-width) {
+        width: 123px;
+    }
+}
+
+.yoga-directions__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 21px;
+    height: 115px;
+    background-color: @basic-purple;
+    cursor: pointer;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 11px;
+        top: 52px;
+        right: 18px;
+        background-image: url("../img/icon-rightarrow.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: cover;
+        z-index: 2;
+
+        @media (min-width: @tablet-width) {
+            top: 55px;
+        }
+
+        @media (min-width: @desktop-width) {
+            width: 12px;
+            height: 16px;
+            top: 83px;
+            right: 25px;
+        }
+    }
+
+    @media (min-width: @tablet-width) {
+        height: 122px;
+
+        &--low {
+            width: 30px;
+            height: 20px;
+            padding: 0;
+            top: 77px;
+            right: 24px;
+
+            &::after {
+                top: 5px;
+                right: 11px;
+            }
+        }
+    }
+
+    @media (min-width: @desktop-width) {
+        height: 182px;
+        padding: 0 32px;
+        
+        &--low {
+            width: 45px;
+            height: 30px;
+            padding: 0;
+            top: 115px;
+            right: 35px;
+
+            &::after {
+                top: 6px;
+                right: 13px;
+            }
+        }
+    }
+}
+
+.yoga-directions__img {
+    vertical-align: bottom;
+}

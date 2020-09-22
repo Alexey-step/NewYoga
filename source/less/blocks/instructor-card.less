@@ -1,0 +1,131 @@
+.instructor-card__item {
+    display: none;
+
+    &--active {
+        display: block;
+
+        @media (min-width: @tablet-width) {
+            min-height: 314px;
+        }
+    }
+}
+
+.instructor-card__wrapper {
+    background-color: @basic-white;
+    display: none;
+
+    @media (min-width: @tablet-width) {
+        position: relative;
+        display: flex;
+        margin-bottom: 58px;
+        padding-left: 98px;
+    }
+
+    &:last-child {
+        @media (min-width: @tablet-width) {
+            margin: 0;
+        }
+    }
+
+    &:first-child {
+        display: flex;
+    }
+}
+
+.instructor-card__img {
+    margin-right: 15px;
+    vertical-align: bottom;
+
+    @media (min-width: @tablet-width) {
+        position: absolute;
+        top: -33px;
+        left: -1px;
+        margin-right: 6px;
+    }
+}
+
+.instructor-card__value {
+    padding-top: 16px;
+    width: 75px;
+
+    @media (min-width: @tablet-width) {
+        padding-top: 13px;
+        margin-right: 39px;
+    }
+}
+
+.instructor-card__text {
+    .font(10px, 15px);
+    color: @basic-darkpink;
+    margin: 0;
+    margin-bottom: 3px;
+}
+
+.instructor-card__description {
+    .font(10px, 20px);
+    color: @basic-purple;
+    margin: 0;
+}
+
+.instructor-card__social-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 17px 19px 9px 17px;
+
+    @media (min-width: @tablet-width) {
+        flex-direction: row;
+        justify-content: center;
+        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 11px;
+    }
+}
+
+.instructor-card__social-link {
+    &--vk {
+        margin-bottom: 14px;
+
+        @media (min-width: @tablet-width) {
+            margin: 0;
+            margin-right: 7px;
+        }
+    }
+}
+
+.instructor-card__social-svg {
+    & path {
+        fill: rgba(139, 126, 172, 0.65);
+    } 
+    
+    &--vk {
+        width: 16px;
+        height: 10px;
+
+        @media (min-width: @tablet-width) {
+            width: 8px;
+            height: 5px;
+        }
+    }
+
+    &--tw {
+        width: 18px;
+        height: 12px;
+
+        @media (min-width: @tablet-width) {
+            width: 10px;
+            height: 7px;
+        }
+    }
+}
+
+.instructor-card__link {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+        display: block;
+        .font (10px, 20px);
+        color: @basic-purple;
+        border-bottom: 1px solid @basic-purple;
+    }
+}

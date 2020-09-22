@@ -1,0 +1,27 @@
+.font(@size, @height) {
+    font-size: @size;
+    line-height: @height;
+}
+  
+.container() {
+    padding: 0 15px;
+    margin: 0 auto;
+    width: @mobile-width;
+  
+    @media (min-width: @tablet-width) {
+      padding-left: 78px;
+      padding-right: 67px;
+      width: @tablet-width;
+    }
+  
+    @media (min-width: @desktop-width) {
+      padding: 0 110px;
+      width: @desktop-width;
+    }
+}
+  
+.list-reset() {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
